@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { LanguageContext } from "../LanguageContext";
 
 class Button extends React.Component {
   render() {
-    const language = this.context
-    return <button>{language === "en" ? "Save" : "Сохранить"}</button>;
+    return (<LanguageContext.Consumer>
+      {(language) => (
+        <button>{language === "en" ? "Save" : "Сохранить"}</button>
+      )}
+    </LanguageContext.Consumer>);
   }
 }
-Button.contextType = LanguageContext
 
 export default Button;
