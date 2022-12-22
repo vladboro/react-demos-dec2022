@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import MyButton from "./MyButton";
 
-const App = () => <h1>Hello, World!</h1>;
+const App = () => (
+  <div>
+    <MyButton text="First" color="red"/>
+    <MyButton text="Second" color="green"/>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
